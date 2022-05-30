@@ -7,8 +7,8 @@ public class DepositCalculator {
         return calculatePow(pay, 2);
     }
 
-    double calculateSimplePercent(double doubleAmount,double double_year_rate, int deposit_period) {
-        return calculatePow(doubleAmount+doubleAmount * double_year_rate *deposit_period, 2);
+    double calculateSimplePercent(double doubleAmount, double double_year_rate, int deposit_period) {
+        return calculatePow(doubleAmount + doubleAmount * double_year_rate * deposit_period, 2);
     }
 
     double calculatePow(double value, int places) {
@@ -21,10 +21,10 @@ public class DepositCalculator {
         int action;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите сумму вклада в рублях:") ;
+        System.out.println("Введите сумму вклада в рублях:");
         int amount = scanner.nextInt();
-        System.out.println("Введите срок вклада в годах:") ;
-        period = scanner.nextInt( );
+        System.out.println("Введите срок вклада в годах:");
+        period = scanner.nextInt();
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         action = scanner.nextInt();
         double out = 0;
